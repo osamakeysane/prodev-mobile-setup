@@ -1,13 +1,13 @@
 import {
-  Dimensions,
+  Text,
+  View,
+  StyleSheet,
   Image,
   ImageBackground,
-  StyleSheet,
-  Text,
+  Dimensions,
   TouchableOpacity,
-  View,
 } from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
@@ -19,18 +19,21 @@ export default function Index() {
           resizeMode="cover"
         >
           <View style={styles.container}>
+            {/* Logo */}
             <View style={styles.companyLogo}>
               <Image source={require("@/assets/images/Logo.png")} />
             </View>
 
+            {/* Text Section */}
             <View style={styles.textGroup}>
-              <Text style={styles.textLarge}>
-                Find your favorite place here
-              </Text>
+              <Text style={styles.textLarge}>Find your favorite place here</Text>
               <Text style={styles.textSmall}>The best prices for over 2 </Text>
-              <Text style={styles.textSmall}>million properties worldwide</Text>
+              <Text style={styles.textSmall}>
+                million properties worldwide
+              </Text>
             </View>
 
+            {/* Buttons + Navigation Prompt */}
             <View style={{ position: "absolute", bottom: 0, width: "100%" }}>
               <View style={styles.buttonGroup}>
                 <TouchableOpacity style={styles.button}>
@@ -43,7 +46,6 @@ export default function Index() {
                   <Text style={styles.textSmall}>Sign In</Text>
                 </TouchableOpacity>
               </View>
-
               <View style={{ alignItems: "center", paddingVertical: 20 }}>
                 <Text style={{ color: "white" }}>Continue to home</Text>
               </View>
@@ -114,3 +116,4 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 });
+<Text style={styles.textSmall}>million properties worldwide</Text>"
